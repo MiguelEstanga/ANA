@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Ana Bárbara 🎂</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- Volver al hub -->
+    <a class="back-link" href="../index.html">← Volver</a>
+
+    <!-- Banner festivo -->
+    <div class="banner">🎂 ¡Feliz Cumpleaños, Ana Bárbara! 🎉</div>
+
+    <!-- ======================================================
+         CARD — carta de Miguel para Ana
+    ====================================================== -->
+    <section class="card">
+      <h1 class="card__title">Una carta de Miguel para ti ✉️</h1>
+
+      <p class="card__body">
+        ¡Holo, Gordis! Ya estamos viejos. Hemos recorrido un largo camino; casi recuerdo como si fuese
+        ayer que entraste a estudiar Medicina y ahora ya eres toda una doctora. Qué honor haberte
+        acompañado después de desgastar nuestros zapatos recorriendo el centro, una infinidad de
+        películas, chistes y buenas frases.
+      </p>
+      <p class="card__body">
+        Me alegra que seas una de mis mejores amigas, una persona en la que puedo confiar y que ha
+        estado en las malas y ahora en las buenas. Espero siempre estar ahí cada que consigas una
+        meta y cada que necesites una mano.
+      </p>
+      <p class="card__body">
+        ¡Qué buena aventura! Hemos visto "dos Venezuelas" y espero que esta temporada la disfrutemos
+        hasta la vejez.
+      </p>
+
+      <div class="card__quote">
+        "El premio es la satisfacción de haber cumplido con el deber, de haber hecho algo por el prójimo."
+        <strong>— Dr. Jacinto Convit</strong>
+      </div>
+
+      <div class="card__quote">
+        "En mi código de vida, tú eres la función que siempre retorna un valor positivo. ¡Feliz cumple!"
+        <strong>— Miguel Estanga</strong>
+      </div>
+
+      <p class="card__signature">Con cariño, El NEGRO LAZER ⚡</p>
+    </section>
+
+    <!-- ======================================================
+         GALLERY — fotos de Miguel & Ana
+         Agrega o quita fotos en el array PHOTOS de abajo
+    ====================================================== -->
+    <section class="gallery">
+      <h2 class="gallery__title">📸 Momentos juntos</h2>
+      <div class="gallery__grid" id="galleryGrid"></div>
+    </section>
+
+  </div>
+
+  <!-- Lightbox (estructura fija, la maneja shared.js) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox__btn lightbox__close" id="lbClose" aria-label="Cerrar">✕</button>
+    <button class="lightbox__btn lightbox__prev"  id="lbPrev"  aria-label="Anterior">‹</button>
+    <img    class="lightbox__img" id="lbImg" src="" alt="" />
+    <button class="lightbox__btn lightbox__next"  id="lbNext"  aria-label="Siguiente">›</button>
+  </div>
+
+  <script src="../shared.js"></script>
+  <script>
+    /* ============================================================
+       PHOTOS — coloca aquí las fotos de la galería.
+       Las imágenes van en:  ../assets/miguel/
+       Soporta 6–10 fotos (o más).
+       ============================================================ */
+    const PHOTOS = [
+      { src: '../assets/miguel/1.jpg',  alt: 'Foto 1' },
+      { src: '../assets/miguel/2.jpg',  alt: 'Foto 2' },
+      { src: '../assets/miguel/3.jpg',  alt: 'Foto 3' },
+      { src: '../assets/miguel/4.jpg',  alt: 'Foto 4' },
+      { src: '../assets/miguel/5.jpg',  alt: 'Foto 5' },
+      { src: '../assets/miguel/6.jpg',  alt: 'Foto 6' },
+      { src: '../assets/miguel/7.jpg',  alt: 'Foto 7' },
+      { src: '../assets/miguel/8.jpg',  alt: 'Foto 8' },
+      { src: '../assets/miguel/9.jpg',  alt: 'Foto 9' },
+    ];
+    /* ============================================================ */
+
+    buildGallery('galleryGrid', PHOTOS);
+  </script>
+</body>
+</html>

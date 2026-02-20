@@ -1,0 +1,4 @@
+;/*FB_PKG_DELIM*/
+
+__d("PolarisDesktopLeftRailStyles",[],(function(t,n,r,o,a,i,l){"use strict";var e=398,s=480,u=315,c={fixedContainerIGD:{maxWidth:"xfawcg2",width:"xjru39d",$$css:!0},fixedContainerSettings:{width:"xtlo18s",$$css:!0},responsiveContainer:{boxSizing:"xuphzoz",flexShrink:"xt5vzds",maxWidth:"xfawcg2",minWidth:"x1cnymv9",width:"x1u1lrf5",$$css:!0}};l.LEFT_RAIL_MIN_WIDTH=e,l.LEFT_RAIL_MAX_WIDTH=s,l.LEFT_RAIL_FIXED_WIDTH_SETTINGS=u,l.desktopLeftRailStyles=c}),98);
+__d("useIsResponsiveLeftRailEnabled",["qex","react-compiler-runtime"],(function(t,n,r,o,a,i,l){"use strict";function e(){var e=o("react-compiler-runtime").c(1),t;return e[0]===Symbol.for("react.memo_cache_sentinel")?(t=r("qex")._("2606"),e[0]=t):t=e[0],t===!0}l.default=e}),98);

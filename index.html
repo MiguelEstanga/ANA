@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cumpleaños 🎂</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="banner">🎉 Cartas de Cumpleaños 🎂</div>
+
+    <div class="hub-grid" id="hubGrid"></div>
+  </div>
+
+  <script src="shared.js"></script>
+  <script>
+    /* ============================================================
+       PERSONAS — agrega aquí cada nueva carta
+       ============================================================ */
+    const PERSONAS = [
+      {
+        emoji:    '🩺',
+        name:     'Ana Bárbara',
+        sub:      'De parte de Miguel',
+        page:     'pages/miguel-ana.html',
+        delay:    '0s',
+      },
+      /* --- Ejemplo de cómo agregar otra persona ---
+      {
+        emoji:    '🎓',
+        name:     'Carlos',
+        sub:      'De parte de todos',
+        page:     'pages/carlos.html',
+        delay:    '0.1s',
+      },
+      */
+    ];
+    /* ============================================================ */
+
+    const grid = document.getElementById('hubGrid');
+    PERSONAS.forEach((p, i) => {
+      const a = document.createElement('a');
+      a.className = 'hub-card';
+      a.href      = p.page;
+      a.style.animationDelay = `${i * 0.1}s`;
+      a.innerHTML = `
+        <span class="hub-card__emoji">${p.emoji}</span>
+        <span class="hub-card__name">${p.name}</span>
+        <span class="hub-card__sub">${p.sub}</span>
+      `;
+      grid.appendChild(a);
+    });
+  </script>
+</body>
+</html>

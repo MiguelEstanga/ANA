@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Ana Bárbara</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Degradado Azul Cielo a Blanco */
+            background: linear-gradient(180deg, #87CEEB 0%, #FFFFFF 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c3e50;
+            overflow-x: hidden;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 600px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+            margin: 20px;
+        }
+
+        h1 { color: #0077b6; margin-bottom: 20px; }
+        p { line-height: 1.6; font-size: 1.1em; text-align: justify; }
+        
+        .quote-box {
+            background: #e0f2f1;
+            padding: 15px;
+            border-left: 5px solid #0077b6;
+            margin: 20px 0;
+            font-style: italic;
+            text-align: left;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-weight: bold;
+            color: #0077b6;
+            font-size: 1.2em;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #f2d74e;
+            top: -10px;
+            z-index: 999;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(100vh) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>¡Feliz Cumpleaños, Ana Bárbara! 🎂</h1>
+        
+        <p>¡Holo, Gordis! Ya estamos viejos. Hemos recorrido un largo camino; casi recuerdo como si fuese ayer que entraste a estudiar Medicina y ahora ya eres toda una doctora. Qué honor haberte acompañado después de desgastar nuestros zapatos recorriendo el centro, una infinidad de películas, chistes y buenas frases.</p>
+        
+        <p>Me alegra que seas una de mis mejores amigas, una persona en la que puedo confiar y que ha estado en las malas y ahora en las buenas. Espero siempre estar ahí cada que consigas una meta y cada que necesites una mano.</p>
+
+        <p>¡Qué buena aventura! Hemos visto "dos Venezuelas" y espero que esta temporada la disfrutemos hasta la vejez.</p>
+
+        <div class="quote-box">
+            "El premio es la satisfacción de haber cumplido con el deber, de haber hecho algo por el prójimo." <br>
+            <strong>— Dr. Jacinto Convit</strong>
+        </div>
+
+        <div class="quote-box">
+            "En mi código de vida, tú eres la función que siempre retorna un valor positivo. ¡Feliz cumple!" <br>
+            <strong>— Miguel Estanga</strong>
+        </div>
+
+        <div class="signature">Con cariño, El NEGRO LAZER ⚡</div>
+    </div>
+
+    <script>
+        function createConfetti() {
+            const colors = ['#87CEEB', '#0077b6', '#f2d74e', '#ffffff'];
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+                confetti.style.opacity = Math.random();
+                document.body.appendChild(confetti);
+            }
+        }
+        window.onload = createConfetti;
+    </script>
+</body>
+</html>
