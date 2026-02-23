@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Ana Bárbara 🎂</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- Volver al hub -->
+      <a class="back-link" href="../index.html">← Volver</a>
+
+      <!-- Banner festivo -->
+      <div class="banner">🎂 ¡Feliz Cumpleaños, Ana Bárbara! 🎉</div>
+
+      <!-- ======================================================
+         CARD — carta de Miguel para Ana
+    ====================================================== -->
+      <section class="card">
+        <h1 class="card__title">Una carta de Rosmary para ti ✉️</h1>
+
+        <p class="card__body">
+          ¡Feliz cumpleaños, Anita! 🥳 Primero que nada, espero que estés
+          teniendo un buen día. Quiero que sepas que, aunque hoy no compartamos
+          tanto como antes, mi cariño por ti sigue intacto. Te quiero muchísimo
+          y deseo que este año esté lleno de alegrías y éxitos.
+        </p>
+        <p class="card__body">
+          Me puse a recordar y parece que fue ayer cuando eras esa niña que
+          siempre andaba con nosotros, los más grandes. Ver la mujer en la que
+          te has convertido me llena de una satisfacción enorme; aunque no
+          seamos hermanas de sangre, me siento profundamente orgullosa de todo
+          lo que has logrado. Sé que hoy te toca estar de guardia, pero espero
+          que eso no te quite la sonrisa. ¡Que se sigan cumpliendo todas tus
+          metas! Un abrazo gigante.
+        </p>
+       
+ 
+
+        <p class="card__signature">Con cariño, Rosmary ⚡</p>
+      </section>
+
+      <!-- ======================================================
+         GALLERY — fotos de Miguel & Ana
+         Agrega o quita fotos en el array PHOTOS de abajo
+    ====================================================== -->
+      <section class="gallery">
+        <h2 class="gallery__title">📸 Momentos juntos</h2>
+        <div class="gallery__grid" id="galleryGrid"></div>
+      </section>
+    </div>
+
+    <!-- Lightbox (estructura fija, la maneja shared.js) -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+      <button
+        class="lightbox__btn lightbox__close"
+        id="lbClose"
+        aria-label="Cerrar"
+      >
+        ✕
+      </button>
+      <button
+        class="lightbox__btn lightbox__prev"
+        id="lbPrev"
+        aria-label="Anterior"
+      >
+        ‹
+      </button>
+      <img class="lightbox__img" id="lbImg" src="" alt="" />
+      <button
+        class="lightbox__btn lightbox__next"
+        id="lbNext"
+        aria-label="Siguiente"
+      >
+        ›
+      </button>
+    </div>
+
+    <script src="../shared.js"></script>
+    <script>
+      /* ============================================================
+       PHOTOS — coloca aquí las fotos de la galería.
+       Las imágenes van en:  ../assets/miguel/
+       Soporta 6–10 fotos (o más).
+       ============================================================ */
+      const PHOTOS = [
+        { src: "../assets/ross/1.jpg", alt: "Foto 1" },
+        { src: "../assets/ross/2.jpg", alt: "Foto 2" },
+        { src: "../assets/ross/3.jpg", alt: "Foto 3" },
+        { src: "../assets/ross/4.jpg", alt: "Foto 4" },
+        { src: "../assets/ross/5.jpg", alt: "Foto 5" },
+    
+      ];
+      /* ============================================================ */
+
+      buildGallery("galleryGrid", PHOTOS);
+    </script>
+  </body>
+</html>
